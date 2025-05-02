@@ -1,0 +1,13 @@
+
+
+[build]
+  publish = "dist"
+  command = "npx vite build"
+
+[build.environment]
+  GO_VERSION = "1.19"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

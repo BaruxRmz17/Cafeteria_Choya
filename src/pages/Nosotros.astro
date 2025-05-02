@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+import AboutSection from '../components/ui/Nosotros/Nosotros.tsx';
+---
+
+<Layout title="Sobre Nosotros - Landing Hotel">
+<main class="min-h-screen bg-gray-100">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-blue-700 text-white flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+    <img
+        src="/src/assets/Images/nobg.avif"
+        alt="Hotel About Hero"
+        class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="relative z-20 text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4">Sobre Nosotros</h1>
+        <p class="text-lg md:text-xl">Conoce nuestra historia y compromiso contigo</p>
+    </div>
+    </section>
+
+    <!-- About Section -->
+    <AboutSection client:load />
+</main>
+</Layout>
